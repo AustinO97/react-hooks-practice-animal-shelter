@@ -1,10 +1,7 @@
 import React from "react";
 
-function Filters({ onChangeType, filters, onFindPetsClick }) {
+function Filters({ onChangeType, onFindPetsClick }) {
 
-  // const handleFindPets = () => {
-  //   onChangeType()
-  // }
 
   return (
     <div className="ui form">

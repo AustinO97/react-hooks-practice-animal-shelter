@@ -3,9 +3,6 @@ import React from "react";
 function Pet({ pet, onAdoptPet }) {
   const { age, gender, isAdopted, name, type, weight, id } = pet
 
-  const handleAdopt = () => {
-    onAdoptPet(id)
-  }
 
   return (
     <div className="card" data-testid="pet">
@@ -27,7 +24,7 @@ function Pet({ pet, onAdoptPet }) {
         {isAdopted ? (
           <button className="ui disabled button">Already adopted</button>
         ) : (
-          <button onClick={handleAdopt} className="ui primary button">Adopt pet</button>
+          <button onClick={() => onAdoptPet(id)} className="ui primary button">Adopt pet</button>
         )}
       </div>
     </div>
